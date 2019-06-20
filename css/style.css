@@ -1,0 +1,437 @@
+@font-face {
+font-family: 'Nexa Light Regular';
+font-style: normal;
+font-weight: normal;
+src: local('/css/fonts/Nexa Light Regular'), url('/css/fonts/Nexa Light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Nexa Bold';
+font-style: normal;
+font-weight: normal;
+src: local('/css/fonts/Nexa Bold'), url('/css/fonts/NexaBold.woff') format('woff');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nexa Light Regular';
+    background-color: #7EAFBB;
+}
+
+header {
+    background-color: white;
+/*
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-100%);
+*/
+    padding: 0.1em;
+    animation: showElement 0.1s;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header>nav>ul>li {
+    list-style: none;
+}
+
+header>nav>ul>li>a {
+    text-decoration: none;
+    font-size: 3em;
+    margin-left: 2em;
+}
+
+#wanted {
+    margin-top: 1.5em;
+    background-color: white;
+    width: 45em;
+    height: 51em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em 0 0.1em;
+    box-shadow: 20px 20px 21px -15px rgba(0,0,0,0.75);
+}
+
+
+h1 {
+    margin-top: 0em;
+    font-size: 7em;
+    text-align: center;
+    font-family: 'Nexa Bold';
+    animation: showElement 0.5s;
+}
+
+.gezocht {
+    animation: flash 4s infinite;
+}
+
+svg {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.doos {
+    width: 25em;
+    animation: growElement 1s;
+}
+
+h2 {
+    font-size: 4em;
+    text-align: center;
+    animation: wobble 1s infinite;
+}
+
+h3 {
+    margin-top: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+    width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+    animation: showElement 0.5s;
+}
+
+button {
+    display: block;
+    margin: auto;
+    background-color: #83162F;
+    border: none;
+    padding: 1em;
+    border-radius: 5em;
+    color: white;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    box-shadow: 10px 10px 21px -10px rgba(0,0,0,0.75);
+}
+
+button:hover {
+    background-color: #853446;
+}
+
+.btnzoek {
+    animation: slideRight 1s;
+}
+
+#choose {
+    padding-top: 4em;
+    padding-bottom: 5em;
+}
+
+.video {
+    position: absolute;
+    margin-left: 7.3em;
+    margin-top: 6em;
+}
+
+#choose>h1 {
+    font-family: 'Nexa Light Regular';
+    color: white;
+    font-size: 5em;
+}
+
+#taartfoto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    position: relative;
+    width: cover;
+    opacity: 0;
+}
+
+#taartfoto.animate {
+    animation: slideRight 1s;
+    opacity: 1;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    z-index: 500;
+    position: absolute;
+    display: block;
+}
+
+.dot:nth-of-type(1) {
+    height: 250px;
+    width: 250px;
+    margin-left: 54em;
+    margin-top: -56em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*
+.dot:nth-of-type(1):hover {
+    background-image: url(/img/Taartrein-aarsman.png);
+    background-size: 720%;
+    background-position: 52% 20%;
+    opacity: 1;
+    filter: grayscale(100%);
+}
+*/
+
+.dot:nth-of-type(2) {
+    height: 200px;
+    width: 200px;
+    margin-left: 35em;
+    margin-top: -55em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*
+.dot:nth-of-type(1):hover {
+    background-image: url(/img/Taartrein-aarsman.png);
+    background-size: 720%;
+    background-position: 52% 20%;
+    opacity: 1;
+    filter: grayscale(100%);
+}
+*/
+
+
+.dot:nth-of-type(3) {
+    height: 350px;
+    width: 350px;
+    margin-left: 60em;
+    margin-top: -28em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dot:nth-of-type(4) {
+    height: 200px;
+    width: 200px;
+    margin-left: 98em;
+    margin-top: -10em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dot:nth-of-type(5) {
+    height: 300px;
+    width: 300px;
+    margin-left: 83em;
+    margin-top: -61em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+section {
+    margin-top: -55em;
+}
+
+p {
+    margin-left: 7em;
+    width: 30em;
+    color: white;
+    opacity: 0;
+    display: none;
+}
+
+.tas.on {
+    display: block;
+    margin-left: 20em;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-top: 20em;
+}
+
+.man.on {
+    display: block;
+    margin-top: 5em;
+    margin-left: 75em;
+    animation: slideRight 1s;
+    opacity: 1;
+}
+
+.zusje.on {
+    display: block;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-top: 25em;
+    margin-left: 88em;
+    width: 20em;
+}
+
+.zonnebril.on {
+    display: block;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-left: 50em;
+    margin-top: 6em;
+    width: 20em;
+}
+
+.baby.on {
+    display: block;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-left: 20em;
+    margin-top: 5em;
+    width: 20em;
+}
+
+.kies {
+    display: none;
+    margin-bottom: 0;
+}
+
+.kies.brilknop {
+    margin-left: 60em;
+    animation: slideRight 1s;
+}
+
+.kies.tasknop {
+    margin-left: 24em;
+    animation: slideRight 1s;
+}
+
+.kies.zusjeknop {
+    margin-left: 105.5em;
+    animation: slideRight 1s;
+}
+
+.kies.babyknop {
+    margin-left: 24em;
+    animation: slideRight 1s;
+}
+
+.kies.manknop {
+    margin-left: 90em;
+    animation: slideRight 1s;
+}
+
+#meer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1em;
+    display: block;
+}
+
+#end {
+    margin-top: 50em;
+}
+
+.foto {
+    position: absolute;
+    margin-left: 7.7em;
+    margin-top: 6em;
+    display: none;
+}
+
+#end>h1 {
+    font-family: 'Nexa Light Regular';
+    color: white;
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+video {
+    position: absolute;
+    transform: translate(-100%, 500%);
+    display: none;
+    margin-bottom: 3em;
+    width: 90%;
+}
+
+video.show {
+    position: absolute;
+    transform: translate(6%, -77%);
+    display: block;
+    animation: showElement 1s;
+}
+
+#andere {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.btnvorige {
+    background-color: #3E4066;
+    margin-left: 7.6em;
+}
+
+ .btnvolgende {
+     background-color: #3E4066;
+     margin-right: 7.5em;
+}
+
+.btnvorige:hover, .btnvolgende:hover {
+    background-color: #312F45;
+}
+
+.btnvorige.change {
+    transform: translateY(75em);
+}
+
+.btnvolgende.change {
+/*    transform: translateY(75em);*/
+    transform: translate(1em, 75em);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+@keyframes showElement {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-200%);
+    }
+    95% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes growElement {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes wobble {
+    0% { transform: translateX(0%); }
+    30% { transform: rotate(3deg); }
+    45% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes flash {
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    84% { color: #000;   }
+    85%{    color: transparent; }
+    99%{    color: transparent;  }
+    100%{   color: transparent;    }
+}

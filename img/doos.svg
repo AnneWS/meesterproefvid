@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 185 185" style="enable-background:new 0 0 185 185;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E88540;}
+	.st1{fill:#D87C3B;}
+	.st2{fill:#E28846;}
+	.st3{fill:#EF974A;}
+	.st4{fill:#F4A135;}
+</style>
+<polygon id="leftback" class="st0" points="92.52,114.26 26.94,144.12 26.94,65.41 92.52,35.54 "/>
+<polygon id="rightback" class="st1" points="92.42,114.26 158,144.12 158,65.41 92.42,35.54 "/>
+<polygon id="leftfront" class="st2" points="26.94,144.07 92.52,173.93 92.52,95.21 26.94,65.35 "/>
+<polygon id="rightfront" class="st3" points="158,144.07 92.42,173.93 92.42,95.21 158,65.35 "/>
+<polygon id="rightbackflap" class="st4" points="157.9,65.35 92.48,35.68 119.31,12.7 184.72,42.36 "/>
+<polygon id="leftfrontflap" class="st4" points="65.69,118 0.28,88.33 27.1,65.35 92.52,95.02 "/>
+<polygon id="rightfrontflap" class="st4" points="119.31,118 184.72,88.33 157.9,65.35 92.48,95.02 "/>
+<polygon id="leftfrontflap_1_" class="st4" points="27.1,65.35 92.52,35.68 65.69,12.7 0.28,42.36 "/>
+</svg>
