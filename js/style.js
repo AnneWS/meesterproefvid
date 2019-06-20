@@ -198,26 +198,20 @@ function showElement(){
 window.addEventListener('scroll', showElement);
 
 
-//bron: https://stackoverflow.com/questions/22018136/how-do-i-detect-if-something-is-being-clicked-in-javascript-without-using-jque
-//var elementIsClicked = false; // declare the variable that tracks the state
-//function clickHandler(){ // declare a function that updates the state
-//  elementIsClicked = true;
-//}
-//
-//console.log(clickHandler);
-//
-//dot1.addEventListener('click', clickHandler);
-//dot2.addEventListener('click', clickHandler);
-//dot3.addEventListener('click', clickHandler);
-//dot4.addEventListener('click', clickHandler);
-//dot5.addEventListener('click', clickHandler);
-//
-//var element = document.getElementById('myElement'); // grab a reference to your element
-//element.addEventListener('click', clickHandler); // associate the function above with the click event
-//
-//
-//// check if the element has been clicked every 2 seconds:
-//function isElementClicked (){
-//  console.log(elementIsClicked ? 'CLICKED' : 'NOT');
-//}
-//setInterval(isElementClicked, 2000);
+//bron: https://sabe.io/tutorials/how-to-create-modal-popup-box
+var modal = document.querySelector(".modal");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if(event.target === modal) {
+        toggleModal();
+    }
+}
+
+volgende.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);
