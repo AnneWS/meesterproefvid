@@ -60,6 +60,7 @@ var brilText = document.querySelector('.zonnebril');
 var manText = document.querySelector('.man');
 var zusjeText = document.querySelector('.zusje');
 var babyText = document.querySelector('.baby');
+var people = document.querySelector('.people');
 
 var kiesButton = document.querySelector('.kies');
 
@@ -70,6 +71,7 @@ function showText() {
     manText.style.display = "none";
     zusjeText.style.display = "none";
     babyText.style.display = "none";
+    people.style.display = "none";
     kiesButton.style.display = "block";
     kiesButton.classList.remove('babyknop');
     kiesButton.classList.remove('zusjeknop');
@@ -88,6 +90,7 @@ function showText2() {
     manText.style.display = "none";
     zusjeText.style.display = "none";
     brilText.style.display = "none";
+    people.style.display = "none";
     kiesButton.style.display = "block";
     kiesButton.classList.remove('brilknop');
     kiesButton.classList.remove('zusjeknop');
@@ -102,6 +105,8 @@ dot2.addEventListener('click', showText2);
 function showText3() {
     tasText.style.display = "block";
     tasText.classList.add('on');
+    people.style.display = "block";
+    people.classList.add('on');
     babyText.style.display = "none";
     manText.style.display = "none";
     zusjeText.style.display = "none";
@@ -124,6 +129,7 @@ function showText4() {
     manText.style.display = "none";
     tasText.style.display = "none";
     brilText.style.display = "none";
+    people.style.display = "none";
     kiesButton.style.display = "block";
     kiesButton.classList.remove('brilknop');
     kiesButton.classList.remove('babyknop');
@@ -142,6 +148,7 @@ function showText5() {
     zusjeText.style.display = "none";
     tasText.style.display = "none";
     brilText.style.display = "none";
+    people.style.display = "none";
     kiesButton.style.display = "block";
     kiesButton.classList.remove('brilknop');
     kiesButton.classList.remove('babyknop');
@@ -159,6 +166,7 @@ function removeText() {
     manText.classList.remove('on');
     zusjeText.classList.remove('on');
     babyText.classList.remove('on');
+    people.classList.remove('on');
     kiesButton.style.display = "none";
     kiesButton.classList.remove('brilknop');
     kiesButton.classList.remove('babyknop');

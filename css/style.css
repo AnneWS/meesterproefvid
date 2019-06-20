@@ -254,6 +254,16 @@ p {
     animation: slideRight 1s;
     opacity: 1;
     margin-top: 20em;
+    text-shadow: 2px 2px black;
+}
+
+.people.on {
+    display: block;
+    margin-left: 50em;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-top: -55em;
+    text-shadow: 2px 2px black;
 }
 
 .man.on {
@@ -262,6 +272,7 @@ p {
     margin-left: 75em;
     animation: slideRight 1s;
     opacity: 1;
+    text-shadow: 2px 2px black;
 }
 
 .zusje.on {
@@ -271,6 +282,7 @@ p {
     margin-top: 25em;
     margin-left: 88em;
     width: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .zonnebril.on {
@@ -280,6 +292,7 @@ p {
     margin-left: 50em;
     margin-top: 6em;
     width: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .baby.on {
@@ -289,6 +302,7 @@ p {
     margin-left: 20em;
     margin-top: 5em;
     width: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .kies {
@@ -299,26 +313,32 @@ p {
 .kies.brilknop {
     margin-left: 60em;
     animation: slideRight 1s;
+    margin-bottom: -25em;
 }
 
 .kies.tasknop {
+    margin-top: 60em;
     margin-left: 24em;
     animation: slideRight 1s;
+    margin-bottom: -45em;
 }
 
 .kies.zusjeknop {
     margin-left: 105.5em;
     animation: slideRight 1s;
+    margin-bottom: -50em;
 }
 
 .kies.babyknop {
     margin-left: 24em;
     animation: slideRight 1s;
+    margin-bottom: -25em;
 }
 
 .kies.manknop {
     margin-left: 90em;
     animation: slideRight 1s;
+    margin-bottom: -25em;
 }
 
 #meer {
