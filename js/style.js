@@ -181,6 +181,7 @@ kiesButton.addEventListener('click', removeText);
 
 //var scrollheight = document.body.scrollHeight; // height of entire document
 //var windowheight = window.innerHeight; // height of browser window
+var headerEl = document.querySelector('header');
 
 function showElement(){
     var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
@@ -189,9 +190,12 @@ function showElement(){
 //    console.log(scrollamount);
     if (scrolltop > 800) {
         taartFoto.classList.add('animate');
+        headerEl.style.opacity= '0.8';
+
     }
     if (scrolltop < 800) {
         taartFoto.classList.remove('animate');
+        headerEl.style.opacity = '1';
     }
 }
 

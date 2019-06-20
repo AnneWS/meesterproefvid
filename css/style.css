@@ -173,41 +173,36 @@ button:hover {
 .dot:nth-of-type(1) {
     height: 250px;
     width: 250px;
-    margin-left: 54em;
-    margin-top: -56em;
+    margin-left: 53.5em;
+    margin-top: -57em;
     opacity: 0;
     cursor: pointer;
 }
 
-/*
 .dot:nth-of-type(1):hover {
     background-image: url(/img/Taartrein-aarsman.png);
-    background-size: 720%;
+    background-size: 675%;
     background-position: 52% 20%;
     opacity: 1;
     filter: grayscale(100%);
 }
-*/
 
 .dot:nth-of-type(2) {
     height: 200px;
     width: 200px;
-    margin-left: 35em;
-    margin-top: -55em;
+    margin-left: 34em;
+    margin-top: -58em;
     opacity: 0;
     cursor: pointer;
 }
 
-/*
-.dot:nth-of-type(1):hover {
+.dot:nth-of-type(2):hover {
     background-image: url(/img/Taartrein-aarsman.png);
-    background-size: 720%;
-    background-position: 52% 20%;
+    background-size: 855%;
+    background-position: 29.4% 17%;
     opacity: 1;
     filter: grayscale(100%);
 }
-*/
-
 
 .dot:nth-of-type(3) {
     height: 350px;
@@ -437,10 +432,11 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #7EAFBB;
     padding: 1rem 1.5rem;
-    width: 24rem;
+    width: 50rem;
     border-radius: 0.5rem;
+    color: white;
 }
 
 .close-button {
@@ -450,11 +446,11 @@ footer {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
+    background-color: #83162F;
 }
 
 .close-button:hover {
-    background-color: darkgray;
+    background-color: #853446;
 }
 
 .modal-content>h2 {
