@@ -7,7 +7,7 @@ console.log('taaaaaart');
 var taartFoto = document.querySelector('#taartfoto');
 
 //bron:https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
-var button = document.querySelector('.btnzoek');
+var button = document.querySelector('button:nth-of-type(1)');
 
 function clickScroll() {
     window.scrollTo({
@@ -32,11 +32,6 @@ function showVideo() {
     btnfoto.style.display = "block";
     volgende.classList.add('change');
     vorige.classList.add('change');
-    dot1.style.display = "none";
-    dot2.style.display = "none";
-    dot3.style.display = "none";
-    dot4.style.display = "none";
-    dot5.style.display = "none";
 }
 
 btnvideo.addEventListener('click', showVideo);
@@ -49,11 +44,6 @@ function showFoto() {
     btnvideo.style.display = "block";
     volgende.classList.remove('change');
     vorige.classList.remove('change');
-    dot1.style.display = "block";
-    dot2.style.display = "block";
-    dot3.style.display = "block";
-    dot4.style.display = "block";
-    dot5.style.display = "block";
 }
 
 btnfoto.addEventListener('click', showFoto);
@@ -189,21 +179,23 @@ function removeText() {
 kiesButton.addEventListener('click', removeText);
 
 
-
+//var scrollheight = document.body.scrollHeight; // height of entire document
+//var windowheight = window.innerHeight; // height of browser window
 var headerEl = document.querySelector('header');
 
 function showElement(){
-    var scrolltop = window.pageYOffset;
+    var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
+//    console.log(scrolltop);
+//    var scrollamount = (scrolltop / (scrollheight-windowheight)) * 100;
+//    console.log(scrollamount);
     if (scrolltop > 800) {
         taartFoto.classList.add('animate');
         headerEl.style.opacity= '0.8';
-        btnvideo.style.opacity = "1";
 
     }
     if (scrolltop < 800) {
         taartFoto.classList.remove('animate');
         headerEl.style.opacity = '1';
-        btnvideo.style.opacity = "0";
     }
 }
 

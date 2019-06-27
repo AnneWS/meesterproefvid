@@ -23,20 +23,6 @@ body {
     background-color: #7EAFBB;
 }
 
-body::after {
-  background: url(/img/alta_train-pulls-in-to-alto-cedro-cuba.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  content: "";
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
 header {
     background-color: white;
 /*
@@ -69,46 +55,15 @@ header>nav>ul>li>a {
     margin-left: 2em;
 }
 
-.video {
-    margin: auto;
-    background-color: #3E4066;
-    opacity: 0;
-    margin-right: 7.5em;
-}
-
-.video:hover {
-    background-color: #312F45;
-}
-
-.foto {
-    margin: auto;
-    margin-right: 7.5em;
-    background-color: #3E4066;
-    display: none;
-}
-
-.foto:hover {
-    background-color: #312F45;
-}
-
 #wanted {
     margin-top: 1.5em;
-    background: rgb(255,255,255, 0.8);
+    background-color: white;
     width: 45em;
     height: 51em;
     margin-left: auto;
     margin-right: auto;
     padding: 3em 0 0.1em;
     box-shadow: 20px 20px 21px -15px rgba(0,0,0,0.75);
-}
-
-#wanted>img {
-    margin: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 35em;
-    opacity: 0.9;
-    margin-left: 10%;
 }
 
 
@@ -118,6 +73,10 @@ h1 {
     text-align: center;
     font-family: 'Nexa Bold';
     animation: showElement 0.5s;
+}
+
+.gezocht {
+    animation: flash 4s infinite;
 }
 
 svg {
@@ -174,6 +133,12 @@ button:hover {
     padding-bottom: 5em;
 }
 
+.video {
+    position: absolute;
+    margin-left: 7.3em;
+    margin-top: 6em;
+}
+
 #choose>h1 {
     font-family: 'Nexa Light Regular';
     color: white;
@@ -188,7 +153,6 @@ button:hover {
     position: relative;
     width: cover;
     opacity: 0;
-    box-shadow: 20px 20px 21px -15px rgba(0,0,0,0.75);
 }
 
 #taartfoto.animate {
@@ -199,11 +163,11 @@ button:hover {
 .dot {
     height: 25px;
     width: 25px;
+    background-color: #bbb;
     border-radius: 50%;
     z-index: 500;
     position: absolute;
     display: block;
-    border: 5px solid #83162F;
 }
 
 .dot:nth-of-type(1) {
@@ -215,16 +179,12 @@ button:hover {
     cursor: pointer;
 }
 
-/*
+.dot:nth-of-type(1):hover {
     background-image: url(/img/Taartrein-aarsman.png);
     background-size: 675%;
     background-position: 52% 20%;
     opacity: 1;
     filter: grayscale(100%);
-*/
-
-.dot:nth-of-type(1):hover {
-    opacity: 1;
 }
 
 .dot:nth-of-type(2) {
@@ -237,14 +197,11 @@ button:hover {
 }
 
 .dot:nth-of-type(2):hover {
-/*
     background-image: url(/img/Taartrein-aarsman.png);
     background-size: 855%;
     background-position: 29.4% 17%;
     opacity: 1;
     filter: grayscale(100%);
-*/
-    opacity: 1;
 }
 
 .dot:nth-of-type(3) {
@@ -256,10 +213,6 @@ button:hover {
     cursor: pointer;
 }
 
-.dot:nth-of-type(3):hover {
-    opacity: 1;
-}
-
 .dot:nth-of-type(4) {
     height: 200px;
     width: 200px;
@@ -267,10 +220,6 @@ button:hover {
     margin-top: -10em;
     opacity: 0;
     cursor: pointer;
-}
-
-.dot:nth-of-type(4):hover {
-    opacity: 1;
 }
 
 .dot:nth-of-type(5) {
@@ -282,10 +231,6 @@ button:hover {
     cursor: pointer;
 }
 
-.dot:nth-of-type(5):hover {
-    opacity: 1;
-}
-
 section {
     margin-top: -55em;
 }
@@ -293,29 +238,28 @@ section {
 p {
     margin-left: 7em;
     width: 30em;
-    color: black;
+    color: white;
     opacity: 0;
     display: none;
-    background: rgb(255,255,255, 0.7);
-    padding: 1em;
+    text-shadow: 2px 2px black;
 }
 
 .tas.on {
     display: block;
-    margin-left: 15em;
+    margin-left: 20em;
     animation: slideRight 1s;
     opacity: 1;
-    margin-top: 0em;
-    width: 20em;
+    margin-top: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .people.on {
     display: block;
-    margin-top: 0em;
-    margin-left: 15em;
+    margin-left: 50em;
     animation: slideRight 1s;
     opacity: 1;
-    width: 20em;
+    margin-top: -55em;
+    text-shadow: 2px 2px black;
 }
 
 .man.on {
@@ -324,8 +268,7 @@ p {
     margin-left: 75em;
     animation: slideRight 1s;
     opacity: 1;
-    width: 20em;
-/*    text-shadow: 2px 2px black;*/
+    text-shadow: 2px 2px black;
 }
 
 .zusje.on {
@@ -335,15 +278,17 @@ p {
     margin-top: 25em;
     margin-left: 88em;
     width: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .zonnebril.on {
     display: block;
     animation: slideRight 1s;
     opacity: 1;
-    margin-left: 40em;
+    margin-left: 50em;
     margin-top: 6em;
     width: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .baby.on {
@@ -353,6 +298,7 @@ p {
     margin-left: 20em;
     margin-top: 5em;
     width: 20em;
+    text-shadow: 2px 2px black;
 }
 
 .kies {
@@ -361,14 +307,14 @@ p {
 }
 
 .kies.brilknop {
-    margin-left: 48em;
+    margin-left: 60em;
     animation: slideRight 1s;
     margin-bottom: -25em;
 }
 
 .kies.tasknop {
-    margin-top: 2em;
-    margin-left: 18em;
+    margin-top: 60em;
+    margin-left: 24em;
     animation: slideRight 1s;
     margin-bottom: -45em;
 }
@@ -400,6 +346,13 @@ p {
 
 #end {
     margin-top: 50em;
+}
+
+.foto {
+    position: absolute;
+    margin-left: 7.7em;
+    margin-top: 6em;
+    display: none;
 }
 
 #end>h1 {
@@ -479,12 +432,11 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(255,255,255, 0.8);
+    background-color: #7EAFBB;
     padding: 1rem 1.5rem;
     width: 50rem;
     border-radius: 0.5rem;
-    color: black;
-    z-index: 500;
+    color: white;
 }
 
 .close-button {
@@ -492,7 +444,6 @@ footer {
     width: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
-    color: white;
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: #83162F;
@@ -511,12 +462,6 @@ footer {
     visibility: visible;
     transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
-
-.popupdoos {
-    width: 30em;
-    margin-left: 20%;
-    margin-right: auto;
 }
 
 @keyframes showElement {
