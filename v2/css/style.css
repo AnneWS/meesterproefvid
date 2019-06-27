@@ -1,0 +1,569 @@
+@font-face {
+font-family: 'Nexa Light Regular';
+font-style: normal;
+font-weight: normal;
+src: local('/css/fonts/Nexa Light Regular'), url('/css/fonts/Nexa Light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Nexa Bold';
+font-style: normal;
+font-weight: normal;
+src: local('/css/fonts/Nexa Bold'), url('/css/fonts/NexaBold.woff') format('woff');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nexa Light Regular';
+    background-color: #7EAFBB;
+}
+
+body::after {
+  background: url(/img/alta_train-pulls-in-to-alto-cedro-cuba.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+    background-color: white;
+/*
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-100%);
+*/
+    padding: 0.1em;
+    animation: showElement 0.1s;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header>nav>ul {
+    display: flex;
+}
+
+header>nav>ul>img {
+    width: auto;
+    height: 3em;
+}
+
+header>nav>ul>li {
+    list-style: none;
+}
+
+header>nav>ul>li>a {
+    text-decoration: none;
+    font-size: 3em;
+    margin-left: 2em;
+}
+
+.video {
+    margin: auto;
+    background-color: #3E4066;
+    opacity: 0;
+    margin-right: 7.5em;
+}
+
+.video:hover {
+    background-color: #312F45;
+}
+
+.foto {
+    margin: auto;
+    margin-right: 7.5em;
+    background-color: #3E4066;
+    display: none;
+}
+
+.foto:hover {
+    background-color: #312F45;
+}
+
+#wanted {
+    margin-top: 1.5em;
+    background: rgb(255,255,255, 0.8);
+    width: 45em;
+    height: 51em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em 0 0.1em;
+    box-shadow: 20px 20px 21px -15px rgba(0,0,0,0.75);
+}
+
+#wanted>img {
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+    opacity: 0.9;
+    margin-left: 10%;
+}
+
+
+h1 {
+    margin-top: 0em;
+    font-size: 7em;
+    text-align: center;
+    font-family: 'Nexa Bold';
+    animation: showElement 0.5s;
+}
+
+svg {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.doos {
+    width: 25em;
+    animation: growElement 1s;
+}
+
+h2 {
+    font-size: 4em;
+    text-align: center;
+    animation: wobble 1s infinite;
+}
+
+h3 {
+    margin-top: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+    width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+    animation: showElement 0.5s;
+}
+
+button {
+    display: block;
+    margin: auto;
+    background-color: #83162F;
+    border: none;
+    padding: 1em;
+    border-radius: 5em;
+    color: white;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    box-shadow: 10px 10px 21px -10px rgba(0,0,0,0.75);
+}
+
+button:hover {
+    background-color: #853446;
+}
+
+.btnzoek {
+    animation: slideRight 1s;
+}
+
+#choose {
+    padding-top: 4em;
+    padding-bottom: 5em;
+}
+
+#choose>h1 {
+    font-family: 'Nexa Light Regular';
+    color: white;
+    font-size: 5em;
+}
+
+#taartfoto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    position: relative;
+    width: cover;
+    opacity: 0;
+    box-shadow: 20px 20px 21px -15px rgba(0,0,0,0.75);
+}
+
+#taartfoto.animate {
+    animation: slideRight 1s;
+    opacity: 1;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    z-index: 500;
+    position: absolute;
+    display: block;
+    border: 5px solid #83162F;
+}
+
+.dot:nth-of-type(1) {
+    height: 250px;
+    width: 250px;
+    margin-left: 53.5em;
+    margin-top: -57em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*
+    background-image: url(/img/Taartrein-aarsman.png);
+    background-size: 675%;
+    background-position: 52% 20%;
+    opacity: 1;
+    filter: grayscale(100%);
+*/
+
+.dot:nth-of-type(1):hover {
+    opacity: 1;
+}
+
+.dot:nth-of-type(2) {
+    height: 200px;
+    width: 200px;
+    margin-left: 34em;
+    margin-top: -58em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dot:nth-of-type(2):hover {
+/*
+    background-image: url(/img/Taartrein-aarsman.png);
+    background-size: 855%;
+    background-position: 29.4% 17%;
+    opacity: 1;
+    filter: grayscale(100%);
+*/
+    opacity: 1;
+}
+
+.dot:nth-of-type(3) {
+    height: 350px;
+    width: 350px;
+    margin-left: 60em;
+    margin-top: -28em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dot:nth-of-type(3):hover {
+    opacity: 1;
+}
+
+.dot:nth-of-type(4) {
+    height: 200px;
+    width: 200px;
+    margin-left: 98em;
+    margin-top: -10em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dot:nth-of-type(4):hover {
+    opacity: 1;
+}
+
+.dot:nth-of-type(5) {
+    height: 300px;
+    width: 300px;
+    margin-left: 83em;
+    margin-top: -61em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dot:nth-of-type(5):hover {
+    opacity: 1;
+}
+
+section {
+    margin-top: -55em;
+}
+
+p {
+    margin-left: 7em;
+    width: 30em;
+    color: black;
+    opacity: 0;
+    display: none;
+    background: rgb(255,255,255, 0.7);
+    padding: 1em;
+}
+
+.tas.on {
+    display: block;
+    margin-left: 15em;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-top: 0em;
+    width: 20em;
+}
+
+.people.on {
+    display: block;
+    margin-top: 0em;
+    margin-left: 15em;
+    animation: slideRight 1s;
+    opacity: 1;
+    width: 20em;
+}
+
+.man.on {
+    display: block;
+    margin-top: 5em;
+    margin-left: 75em;
+    animation: slideRight 1s;
+    opacity: 1;
+    width: 20em;
+/*    text-shadow: 2px 2px black;*/
+}
+
+.zusje.on {
+    display: block;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-top: 25em;
+    margin-left: 88em;
+    width: 20em;
+}
+
+.zonnebril.on {
+    display: block;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-left: 40em;
+    margin-top: 6em;
+    width: 20em;
+}
+
+.baby.on {
+    display: block;
+    animation: slideRight 1s;
+    opacity: 1;
+    margin-left: 20em;
+    margin-top: 5em;
+    width: 20em;
+}
+
+.kies {
+    display: none;
+    margin-bottom: 0;
+}
+
+.kies.brilknop {
+    margin-left: 48em;
+    animation: slideRight 1s;
+    margin-bottom: -25em;
+}
+
+.kies.tasknop {
+    margin-top: 2em;
+    margin-left: 18em;
+    animation: slideRight 1s;
+    margin-bottom: -45em;
+}
+
+.kies.zusjeknop {
+    margin-left: 105.5em;
+    animation: slideRight 1s;
+    margin-bottom: -50em;
+}
+
+.kies.babyknop {
+    margin-left: 24em;
+    animation: slideRight 1s;
+    margin-bottom: -25em;
+}
+
+.kies.manknop {
+    margin-left: 90em;
+    animation: slideRight 1s;
+    margin-bottom: -25em;
+}
+
+#meer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1em;
+    display: block;
+}
+
+#end {
+    margin-top: 50em;
+}
+
+#end>h1 {
+    font-family: 'Nexa Light Regular';
+    color: white;
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+video {
+    position: absolute;
+    transform: translate(-100%, 500%);
+    display: none;
+    margin-bottom: 3em;
+    width: 90%;
+}
+
+video.show {
+    position: absolute;
+    transform: translate(6%, -77%);
+    display: block;
+    animation: showElement 1s;
+}
+
+#andere {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.btnvorige {
+    background-color: #3E4066;
+    margin-left: 7.6em;
+}
+
+ .btnvolgende {
+     background-color: #3E4066;
+     margin-right: 7.5em;
+}
+
+.btnvorige:hover, .btnvolgende:hover {
+    background-color: #312F45;
+}
+
+.btnvorige.change {
+    transform: translateY(75em);
+}
+
+.btnvolgende.change {
+/*    transform: translateY(75em);*/
+    transform: translate(1em, 75em);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+/*bron:https://sabe.io/tutorials/how-to-create-modal-popup-box*/
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleX(1.1) scaleY(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255,255,255, 0.8);
+    padding: 1rem 1.5rem;
+    width: 50rem;
+    border-radius: 0.5rem;
+    color: black;
+    z-index: 500;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: #83162F;
+}
+
+.close-button:hover {
+    background-color: #853446;
+}
+
+.modal-content>h2 {
+    animation: none;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.popupdoos {
+    width: 30em;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+@keyframes showElement {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-200%);
+    }
+    95% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes growElement {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes wobble {
+    0% { transform: translateX(0%); }
+    30% { transform: rotate(3deg); }
+    45% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes flash {
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    84% { color: #000;   }
+    85%{    color: transparent; }
+    99%{    color: transparent;  }
+    100%{   color: transparent;    }
+}
