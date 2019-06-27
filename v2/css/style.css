@@ -482,7 +482,6 @@ footer {
     background: rgb(255,255,255, 0.8);
     padding: 1rem 1.5rem;
     width: 50rem;
-    border-radius: 0.5rem;
     color: black;
     z-index: 500;
 }
