@@ -24,7 +24,7 @@ body {
 }
 
 body::after {
-  background: url(/img/alta_train-pulls-in-to-alto-cedro-cuba.jpg);
+  background: url(../img/alta_train-pulls-in-to-alto-cedro-cuba.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   content: "";
