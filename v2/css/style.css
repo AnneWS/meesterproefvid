@@ -2,14 +2,14 @@
 font-family: 'Nexa Light Regular';
 font-style: normal;
 font-weight: normal;
-src: local('../css/fonts/Nexa Light Regular'), url('../css/fonts/Nexa Light.woff') format('woff');
+src: local('css/fonts/Nexa Light Regular'), url('css/fonts/Nexa Light.woff') format('woff');
 }
 
 @font-face {
 font-family: 'Nexa Bold';
 font-style: normal;
 font-weight: normal;
-src: local('../css/fonts/Nexa Bold'), url('../css/fonts/NexaBold.woff') format('woff');
+src: local('css/fonts/Nexa Bold'), url('css/fonts/NexaBold.woff') format('woff');
 }
 
 * {
